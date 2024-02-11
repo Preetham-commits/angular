@@ -123,4 +123,3 @@ export class CollegeComponent extends PagedListingComponentBase<CollegeDto> {
 		this.getDataPage(1);
 	}
 }
-
