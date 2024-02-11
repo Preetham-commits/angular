@@ -1,3 +1,10 @@
+# Demonstration on how migrations works:
+Whenever I make changes to the dbcontext classes (e.g., adding a new property or entity), I need to create a new migration to update the database schema accordingly. 
+To create a migration, I have to use the Entity Framework Core CLI, run the "dotnet ef migrations add MyStudentMigration"
+To apply the migration to the database "dotnet ef database update" command should be used.
+
+
+
 # MyCollegeTaskTemplate
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.31.
