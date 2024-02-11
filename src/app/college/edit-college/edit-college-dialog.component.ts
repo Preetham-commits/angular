@@ -9,7 +9,8 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 import { AppComponentBase } from '@shared/app-component-base';
 import {
   StudentServiceProxy,
-  CollegeDto
+  CollegeDto,
+  CollegeServiceProxy
 } from '@shared/service-proxies/service-proxies';
 
 @Component({
@@ -25,7 +26,7 @@ export class EditCollegeDialogComponent extends AppComponentBase
 
   constructor(
       injector: Injector,
-      public _collegeService: StudentServiceProxy,
+      public _collegeService: CollegeServiceProxy,
       public bsModalRef: BsModalRef
   ) {
     super(injector);

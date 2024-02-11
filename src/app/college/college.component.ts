@@ -20,7 +20,7 @@ class PagedCollegeRequestDto extends PagedRequestDto {
 }
 
 @Component({
-	templateUrl: './colleges.component.html',
+	templateUrl: './college.component.html',
 	animations: [appModuleAnimation()]
 })
 export class CollegeComponent extends PagedListingComponentBase<CollegeDto> {
@@ -65,7 +65,7 @@ export class CollegeComponent extends PagedListingComponentBase<CollegeDto> {
 
 	delete(college: CollegeDto): void {
 		abp.message.confirm(
-			this.l('CollegeDeleteWarningMessage', college.firstName),
+			this.l('CollegeDeleteWarningMessage', college.name),
 			undefined,
 			(result: boolean) => {
 				if (result) {
