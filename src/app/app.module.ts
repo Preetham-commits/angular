@@ -45,7 +45,7 @@ import { EditStudentDialogComponent } from './students/edit-student/edit-student
 // College
 import { CollegeComponent } from '@app/college/college.component';
 import { CreateCollegeDialogComponent } from './college/create-college/create-college-dialog.component';
-// import { EditStudentDialogComponent } from './students/edit-student/edit-student-dialog.component';
+import { EditCollegeDialogComponent } from './college/edit-college/edit-college-dialog.component';
 
 @NgModule({
     declarations: [
@@ -82,7 +82,8 @@ import { CreateCollegeDialogComponent } from './college/create-college/create-co
         CreateStudentDialogComponent,
         // College
         CollegeComponent,
-        CreateCollegeDialogComponent
+        CreateCollegeDialogComponent,
+        EditCollegeDialogComponent
     ],
     imports: [
         CommonModule,
