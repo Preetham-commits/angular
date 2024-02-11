@@ -9,6 +9,7 @@ import { TenantsComponent } from './tenants/tenants.component';
 import { RolesComponent } from 'app/roles/roles.component';
 import { ChangePasswordComponent } from './users/change-password/change-password.component';
 import { StudentsComponent } from 'app/students/students.component';
+import { CollegeComponent } from './college/college.component';
 ///app-routing.module.ts.place1///
 
 @NgModule({
@@ -25,6 +26,7 @@ import { StudentsComponent } from 'app/students/students.component';
                     { path: 'about', component: AboutComponent, canActivate: [AppRouteGuard] },
                     { path: 'update-password', component: ChangePasswordComponent, canActivate: [AppRouteGuard] }
                     ,{ path: 'students', component: StudentsComponent, data: { permission: 'Pages.Students' }, canActivate: [AppRouteGuard] }
+                    ,{ path: 'college', component: CollegeComponent, data: { permission: 'Pages.Students' }, canActivate: [AppRouteGuard] }
 ///app-routing.module.ts.place2///
                 ]
             }
