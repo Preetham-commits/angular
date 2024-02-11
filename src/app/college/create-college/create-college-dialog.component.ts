@@ -9,8 +9,7 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 import { AppComponentBase } from '@shared/app-component-base';
 import {
 	CollegeServiceProxy,
-	CreateCollegeDto,
-	StudentServiceProxy
+	CreateCollegeDto
 } from '@shared/service-proxies/service-proxies';
 
 @Component({

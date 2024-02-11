@@ -20,7 +20,7 @@ export class EditCollegeDialogComponent extends AppComponentBase
     implements OnInit {
   saving = false;
   college: CollegeDto = new CollegeDto();
-  id: number;
+  collegeId: number;
 
   @Output() onSave = new EventEmitter<any>();
 
@@ -33,7 +33,7 @@ export class EditCollegeDialogComponent extends AppComponentBase
   }
 
   ngOnInit(): void {
-    this._collegeService.get(this.id).subscribe((result: CollegeDto) => {
+    this._collegeService.get(this.collegeId).subscribe((result: CollegeDto) => {
       this.college = result;
     });
   }

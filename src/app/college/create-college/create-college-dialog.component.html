@@ -5,55 +5,55 @@
 		(ngSubmit)="save()"
 >
 	<abp-modal-header
-			[title]="'CreateNewStudent' | localize"
+			[title]="'Create New College' | localize"
 			(onCloseClick)="bsModalRef.hide()"
 	></abp-modal-header>
 	<div class="modal-body">
 		
 		<div class="form-group row required">
-    <label class="col-md-3 col-form-label" for="firstName">
-        {{ "FirstName" | localize }}
+    <label class="col-md-3 col-form-label" for="name">
+        {{ "Name" | localize }}
     </label>
     <div class="col-md-9">
         <input
             type="text"
             class="form-control"
-            name="firstName"
-            id="firstName"
+            name="name"
+            id="name"
             required
             minlength="2"
             maxlength="256"
-            [(ngModel)]="student.firstName"
-            #firstNameModel="ngModel"
-            #firstNameEl
+            [(ngModel)]="college.name"
+            #nameModel="ngModel"
+            #nameEl
         />
         <abp-validation-summary
-                [control]="firstNameModel"
-                [controlEl]="firstNameEl"
+                [control]="nameModel"
+                [controlEl]="nameEl"
         ></abp-validation-summary>
     </div>
 </div>
 
 <div class="form-group row required">
-    <label class="col-md-3 col-form-label" for="lastName">
-        {{ "LastName" | localize }}
+    <label class="col-md-3 col-form-label" for="description">
+        {{ "Description" | localize }}
     </label>
     <div class="col-md-9">
         <input
             type="text"
             class="form-control"
-            name="lastName"
-            id="lastName"
+            name="description"
+            id="description"
             required
             minlength="2"
             maxlength="256"
-            [(ngModel)]="student.lastName"
-            #lastNameModel="ngModel"
-            #lastNameEl
+            [(ngModel)]="college.description"
+            #descriptionModel="ngModel"
+            #descriptionEl
         />
         <abp-validation-summary
-                [control]="lastNameModel"
-                [controlEl]="lastNameEl"
+                [control]="descriptionModel"
+                [controlEl]="descriptionEl"
         ></abp-validation-summary>
     </div>
 </div>
@@ -71,7 +71,7 @@
             required
             minlength="2"
             maxlength="256"
-            [(ngModel)]="student.address"
+            [(ngModel)]="college.address"
             #addressModel="ngModel"
             #addressEl
         />
@@ -83,49 +83,49 @@
 </div>
 
 <div class="form-group row required">
-    <label class="col-md-3 col-form-label" for="programName">
-        {{ "ProgramName" | localize }}
+    <label class="col-md-3 col-form-label" for="latitude">
+        {{ "Latitude" | localize }}
     </label>
     <div class="col-md-9">
         <input
             type="text"
             class="form-control"
-            name="programName"
-            id="programName"
+            name="latitude"
+            id="latitude"
             required
             minlength="2"
             maxlength="256"
-            [(ngModel)]="student.programName"
-            #programNameModel="ngModel"
-            #programNameEl
+            [(ngModel)]="college.latitude"
+            #latitudeModel="ngModel"
+            #latitudeEl
         />
         <abp-validation-summary
-                [control]="programNameModel"
-                [controlEl]="programNameEl"
+                [control]="latitudeModel"
+                [controlEl]="latitudeEl"
         ></abp-validation-summary>
     </div>
 </div>
 
 <div class="form-group row required">
-    <label class="col-md-3 col-form-label" for="doB">
-        {{ "DoB" | localize }}
+    <label class="col-md-3 col-form-label" for="longitude">
+        {{ "Longitude" | localize }}
     </label>
     <div class="col-md-9">
         <input
             type="text"
             class="form-control"
-            name="doB"
-            id="doB"
+            name="longitude"
+            id="longitude"
             required
             minlength="2"
             maxlength="256"
-            [(ngModel)]="student.doB"
-            #doBModel="ngModel"
-            #doBEl
+            [(ngModel)]="college.longitude"
+            #longitudeModel="ngModel"
+            #longitudeEl
         />
         <abp-validation-summary
-                [control]="doBModel"
-                [controlEl]="doBEl"
+                [control]="longitudeModel"
+                [controlEl]="longitudeEl"
         ></abp-validation-summary>
     </div>
 </div>
@@ -133,28 +133,52 @@
 <!-- college Id  -->
 
 <div class="form-group row required">
-  <label class="col-md-3 col-form-label" for="collegeId">
-      {{ "CollegeId" | localize }}
+  <label class="col-md-3 col-form-label" for="contact">
+      {{ "Contact" | localize }}
   </label>
   <div class="col-md-9">
       <input
           type="text"
           class="form-control"
-          name="collegeId"
-          id="collegeId"
+          name="contact"
+          id="contact"
           required
           minlength="1"
           maxlength="256"
-          [(ngModel)]="student.collegeId"
-          #collegeIdModel="ngModel"
-          #collegeIdEl
+          [(ngModel)]="college.contact"
+          #contactModel="ngModel"
+          #contactEl
       />
       <abp-validation-summary
-              [control]="collegeIdModel"
-              [controlEl]="collegeIdEl"
+              [control]="contactModel"
+              [controlEl]="contactEl"
       ></abp-validation-summary>
   </div>
 </div>
+
+<div class="form-group row required">
+    <label class="col-md-3 col-form-label" for="email">
+        {{ "Email" | localize }}
+    </label>
+    <div class="col-md-9">
+        <input
+            type="text"
+            class="form-control"
+            name="email"
+            id="email"
+            required
+            minlength="1"
+            maxlength="256"
+            [(ngModel)]="college.email"
+            #emailModel="ngModel"
+            #emailEl
+        />
+        <abp-validation-summary
+                [control]="emailModel"
+                [controlEl]="emailEl"
+        ></abp-validation-summary>
+    </div>
+  </div>
 
 <!--create-dialog.component.html.fields1-->
 
@@ -169,7 +193,7 @@
 							class="custom-control-input"
 							name="isActive"
 							id="isActive"
-							[(ngModel)]="student.isActive"
+							[(ngModel)]="college.isActive"
 					/>
 					<label class="custom-control-label mt-2" for="isActive"></label>
 				</div>

@@ -106,7 +106,7 @@ export class CollegeComponent extends PagedListingComponentBase<CollegeDto> {
 				{
 					class: 'modal-lg',
 					initialState: {
-						id: id,
+						collegeId: id,
 					},
 				}
 			);
